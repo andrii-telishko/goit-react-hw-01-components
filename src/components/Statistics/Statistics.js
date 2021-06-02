@@ -4,7 +4,7 @@ import styles from "./Statistics.module.css"
 
 
 const Statistics = ({title, stats}) => (
-    <section className={styles.statistic_section}>
+    <div className={styles.statistic_section}>
         <h2>Statistics</h2>
         {title && (<h3 className={styles.section_title}>{title}</h3>)}
         <ul className={styles.statistic_list}>
@@ -16,7 +16,7 @@ const Statistics = ({title, stats}) => (
                 </li>
             ))}
         </ul>
-    </section>
+    </div>
 )
 
 Statistics.defaultProps = {
@@ -25,7 +25,13 @@ Statistics.defaultProps = {
 
 Statistics.propTypes = {
     title: PropTypes.string,
-    stats: PropTypes.array.isRequired
+    stats: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
+            percentage: PropTypes.number.isRequired
+        })
+    )
 }
 
 export default Statistics

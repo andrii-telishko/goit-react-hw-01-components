@@ -1,0 +1,31 @@
+table,
+td,
+th {
+  border: 1px solid black;
+  height: 50px;
+}
+
+.table_conteiner {
+  text-align: center;
+  width: 1500px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 4px 4px 6px -2px rgba(0, 0, 0, 0.39);
+  margin-bottom: 30px;
+}
+
+.table_head {
+  background-color: blue;
+  color: white;
+}
+
+.table_item {
+  color: grey;
+}
+
+.table_item:nth-child(even) {
+  background-color: rgb(228, 225, 225);
+}
