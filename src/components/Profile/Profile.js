@@ -33,12 +33,7 @@ const Profile = ({ name, tag, location, avatar, stats: {followers,views, likes} 
 </div>
 )
 
-Profile.defaultProps = {
-  followers: 0,
-  views: 0,
-  
-  likes:0
-}
+
 
 Profile.propTypes = {
   name: PropTypes.string.isRequired,
@@ -47,7 +42,11 @@ Profile.propTypes = {
   avatar: PropTypes.string.isRequired,
   followers: PropTypes.number,
   views: PropTypes.number,
-  likes: PropTypes.number
+  likes: PropTypes.number,
+  stats: PropTypes.objectOf(
+    PropTypes.number.isRequired
+      
+  )
 }
 
 export default Profile

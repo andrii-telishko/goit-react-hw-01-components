@@ -19,6 +19,10 @@ const Statistics = ({title, stats}) => (
     </section>
 )
 
+Statistics.defaultProps = {
+    title: ''
+}
+
 Statistics.propTypes = {
     title: PropTypes.string,
     stats: PropTypes.array.isRequired

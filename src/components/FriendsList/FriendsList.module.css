@@ -1,0 +1,55 @@
+.friend_section {
+  text-align: center;
+  width: 500px;
+  padding: 15px;
+  background-color: rgb(241, 240, 240);
+  margin-bottom: 30px;
+}
+
+.friend_list {
+  margin: 0;
+  padding: 0;
+}
+
+.friend_item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid grey;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 4px 4px 6px -2px rgba(0, 0, 0, 0.39);
+}
+
+.friend_item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.friend_avatar {
+  height: 100%;
+  width: 70px;
+  margin-right: 20px;
+}
+
+.friend_status_online {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: green;
+  margin-right: 50px;
+}
+
+.friend_status_offline {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: red;
+  margin-right: 50px;
+}
+
+.friend_name {
+  font-weight: bold;
+  font-size: 24px;
+}
