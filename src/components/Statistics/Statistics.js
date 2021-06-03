@@ -2,8 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Statistics.module.css"
 
-
-const Statistics = ({title, stats}) => (
+const Statistics = ({ title, stats }) => (
     <div className={styles.statistic_section}>
         <h2>Statistics</h2>
         {title && (<h3 className={styles.section_title}>{title}</h3>)}
@@ -17,11 +16,11 @@ const Statistics = ({title, stats}) => (
             ))}
         </ul>
     </div>
-)
+);
 
 Statistics.defaultProps = {
     title: ''
-}
+};
 
 Statistics.propTypes = {
     title: PropTypes.string,
@@ -32,6 +31,6 @@ Statistics.propTypes = {
             percentage: PropTypes.number.isRequired
         })
     )
-}
+};
 
 export default Statistics

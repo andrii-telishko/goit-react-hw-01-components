@@ -8,8 +8,6 @@ const FriendsList = ({  friends }) => (
         <h2>FriendsList</h2>
         <ul className={styles.friend_list}>
             {friends.map(({ avatar= "https://obrmos.ru/do/do_hud/Art/img/chern-kv.png", name, isOnline, id }) => {
-
-
                 const classStatus = isOnline ? styles.friend_status_online : styles.friend_status_offline;
                 return (
                     <li key={id} className={styles.friend_item}>
@@ -20,30 +18,18 @@ const FriendsList = ({  friends }) => (
                 )
             })
             }
-            
-        
-        
         </ul>
     </div>
-    
 );
-
-
 
 FriendsList.propTypes = {
     friends: PropTypes.arrayOf(
         PropTypes.shape({
-    avatar: PropTypes.string,
-    name: PropTypes.string.isRequired,
-    isOnline: PropTypes.bool.isRequired,
-    id: PropTypes.number.isRequired
-        }
-
-        )
-    )
-    
-}
-
-
+            avatar: PropTypes.string,
+            name: PropTypes.string.isRequired,
+            isOnline: PropTypes.bool.isRequired,
+            id: PropTypes.number.isRequired
+        }))
+};
 
 export default FriendsList

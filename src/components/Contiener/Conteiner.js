@@ -1,14 +1,10 @@
 import React from "react";
 import styles from "./Conteiner.module.css"
 
-const Conteiner = ({children}) => (
+const Conteiner = ({ children }) => (
     <div className={styles.conteiner}>
-        
         { children}
-        
-        </div>
-)
+    </div>
+);
     
-
-
 export default Conteiner

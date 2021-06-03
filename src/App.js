@@ -13,27 +13,21 @@ function App() {
   return (
     <>
       <h1>Homework 1</h1>
-    <Conteiner>
-      <Profile
-      name={user.name}
-  tag={user.tag}
-  location={user.location}
-  avatar={user.avatar}
-      stats={user.stats} />
-      <Statistics
-        title={'Upload stats'}
-        stats = {statistic}
-      />
-      <FriendsList friends={friends} />
-      <TransactionsHistory transactions={transactions}/>
-    </Conteiner>
+      <Conteiner>
+         <Profile
+            name={user.name}
+            tag={user.tag}
+            location={user.location}
+            avatar={user.avatar}
+            stats={user.stats} />
+         <Statistics
+           title='Upload stats'
+           stats = {statistic} />
+         <FriendsList friends={friends} />
+         <TransactionsHistory transactions={transactions} />
+      </Conteiner>
     </>
-    
-    
-        
-      
-      
-  );
-}
+    );
+};
 
 export default App;

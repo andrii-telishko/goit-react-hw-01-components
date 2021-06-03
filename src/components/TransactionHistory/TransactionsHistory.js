@@ -2,12 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./TransactionsHistory.module.css"
 
-const TransactionsHistory = ({ transactions }) =>
-   
-(<>
+const TransactionsHistory = ({ transactions }) =>  (
     <div className={styles.table_conteiner}>
         <h2 >Transactions History</h2>
-    
         <table className={styles.table}>
             <thead className={styles.table_head}>
                 <tr>
@@ -18,21 +15,17 @@ const TransactionsHistory = ({ transactions }) =>
             </thead>
             <tbody>
                 {transactions.map(({ id, type, amount, currency }) => (
-    
-       
                     <tr key={id} className={styles.table_item}>
                         <td>{type}</td>
                         <td>{amount}</td>
                         <td>{currency}</td>
                     </tr>
-         
                 ))}
-    
             </tbody>
         </table>
     </div>
     
-</>
+
 );
     
 TransactionsHistory.propTypes = {
@@ -42,8 +35,5 @@ TransactionsHistory.propTypes = {
         )
     )
 };
-
-
-
 
 export default TransactionsHistory
